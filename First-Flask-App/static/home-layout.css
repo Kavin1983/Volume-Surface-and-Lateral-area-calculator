@@ -1,0 +1,160 @@
+html {
+    background-color: #608699;
+}
+
+body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 87%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes horizontal-fadein {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes horizontal-fadein-opp {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vertical-fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+
+    25% {
+        opacity: 0;
+        transform:translateY(-120%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-90%);
+    }
+
+    75% {
+        opacity: .5;
+        transform: translateY(-40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+h1 {
+    font-weight: normal;
+}
+
+.header-box {
+    max-width: 940px;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #608699;
+    border: 3px solid #608699;
+    border-left: unset;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    transition: all 1s;
+}
+
+.site-nav li {
+    list-style: none;
+    margin-bottom: 5px;
+    width: 85%;
+}
+
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+}
+
+.site-nav {
+    margin-top: 20px;
+    width: 30%;
+    float: left;
+    background-color: #FFF;
+    animation-name: horizontal-fadein;
+    animation-duration: 1s;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: #FFF;
+    background-color: #608699;
+}
+
+@media screen and (max-width:767px) {
+
+
+    body {font-size: 72%;}
+
+    .site-nav {
+        width: 100%;
+    }
+
+    .site-nav li {
+        width: 100%
+    }
+
+    .site-nav a {
+        border-left: 3px solid #608699;
+        margin: 0 30px;
+        font-size: 200%;
+        border-radius: 10px;
+
+    }
+}
+
+.content-area {
+    background-color: #FFF;
+}
+
+.text p {
+    text-align: left;
+    font-size: large;
+}
+
+
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both
+}
+
+.group {
+    zoom: 1
+}

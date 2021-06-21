@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Triangular-prism</title>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='shapes.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-box">
+                <h1>Triangular-prism surface area, lateral area, and volume</h1>
+            </div>
+        </header>
+        <nav class="site-nav group">
+            <ul class="group">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href= "{{ url_for('cone') }}">Cone</a></li>
+                <li><a href="{{ url_for('cube') }}">Cube</a></li>
+                <li><a href="{{ url_for('cylinder') }}">Cylinder</a></li>
+                <li><a href="{{ url_for('sphere') }}">Sphere</a></li>
+                <li><a href="{{ url_for('pyramid') }}">Pryamid</a></li>
+                <li><a href="{{ url_for('triangular_prism') }}">Triangular-Prism</a></li>
+                <li><a href="{{ url_for('rectangular_prism') }}">Rectangular-Prism</a></li>
+                <li><a href="{{ url_for('pentagonal_prism') }}">Pentagonal-Prism</a></li>
+                <li><a href="{{ url_for('hexagonal_prism') }}">Hexagonal-Prism</a></li>
+            </ul>
+        </nav>
+        <div class="content-area group">
+            <div class="calculator group">
+                <h2>Calculator</h2>
+                <form method="POST">
+                    <input type="number" step=.00000001 name="first-base-side" id="first-base-side" placeholder="Enter first base-side">
+    
+                    <input type="number" step=.00000001 name="second-base-side" id="second-base-side" placeholder="Enter second base-side">
+                
+                    <input type="number" step=.00000001 name="third-base-side" id="third-base-side" placeholder="Enter third base-side">
+
+                    <input type="number" step=.00000001 name="height" id="height" placeholder="Enter height">
+    
+
+                    <label for="first-base-side" class="hidden-label">Enter the triangular-prism's first-base-side</label>
+                    <label for="second-base-side" class="hidden-label">Enter the triangular-prism's second-base-side</label>
+                    <label for="third-base-side" class="hidden-label">Enter the triangular-prism's third-base-side</label>
+                    <label for="height" class="hidden-label">Enter the height</label>
+
+                    <input type="submit" value="submit">
+
+                </form>
+
+                <p>First-base-side: {{First_base_side}}</p>
+                <p>Second-base-side: {{Second_base_side}}</p>
+                <p>Third-base-side: {{Third-base-side}}</p>
+                <p>Height: {{Height}}</p>
+                <p>Volume: {{Volume}}</p>
+                <p>Lateral area: {{Lateral_area}}</p>
+                <p>Surface area: {{Surface_area}}</p>
+            </div>
+
+            <div class="formulas">
+                <p><em>a</em> is the first base-length, <em>b</em> is the second base-length, <em>c</em>
+                is the third-base-side, <em>h</em> is the height</p>
+                <p>The formula for surface area of a triangular-prism: </p>
+                <img src="{{ url_for('static', filename='Triangular-prism/Triangular-prism-Surface-area-formula.png') }}">
+
+                <p>The formula for lateral area of a trinagular-prism</p>
+                <img src="{{ url_for('static', filename='Triangular-prism/Triangular-prism-Lateral-area-formula.png') }}">
+
+                <p>The formula for volume of a triangular-prism:</p>
+                <img src="{{ url_for('static', filename='Triangular-prism/Triangular-prism-Volume-formula.png') }}">
+            </div>
+        </div>
+    </body>
+
+</html>

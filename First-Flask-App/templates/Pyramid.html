@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Pyramid</title>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='shapes.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-box">
+                <h1>Pyramid surface area, lateral area, and volume</h1>
+            </div>
+        </header>
+        <nav class="site-nav group">
+            <ul class="group">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href= "{{ url_for('cone') }}">Cone</a></li>
+                <li><a href="{{ url_for('cube') }}">Cube</a></li>
+                <li><a href="{{ url_for('cylinder') }}">Cylinder</a></li>
+                <li><a href="{{ url_for('sphere') }}">Sphere</a></li>
+                <li><a href="{{ url_for('pyramid') }}">Pryamid</a></li>
+                <li><a href="{{ url_for('triangular_prism') }}">Triangular-Prism</a></li>
+                <li><a href="{{ url_for('rectangular_prism') }}">Rectangular-Prism</a></li>
+                <li><a href="{{ url_for('pentagonal_prism') }}">Pentagonal-Prism</a></li>
+                <li><a href="{{ url_for('hexagonal_prism') }}">Hexagonal-Prism</a></li>
+            </ul>
+        </nav>
+        <div class="content-area group">
+            <div class="calculator group">
+                <h2>Calculator</h2>
+                <form method="POST">
+                    <input type="number" step=.00000001 name="base-length" id="base-length" placeholder="Enter base-length">
+    
+                    <input type="number" step=.00000001 name="height" id="height" placeholder="Enter height">
+                
+        
+                    <input type="number" step=.00000001 name="width" id="width" placeholder="Enter width">
+    
+
+                    <label for="base-length" class="hidden-label">Enter the Pyramid's base-length</label>
+                    <label for="height" class="hidden-label">Enter the Pyramid's height</label>
+                    <label for="width" class="hidden-label">Enter the Pyramid's width</label>
+
+                    <input type="submit" value="submit">
+                </form>
+
+                <p>Base-length: {{Length}}</p>
+                <p>Height: {{Height}}</p>
+                <p>Width: {{Width}}</p>
+                <p>Volume: {{Volume}}</p>
+                <p>Lateral area: {{Lateral_area}}</p>
+                <p>Surface area: {{Surface_area}}</p>
+            </div>
+
+            <div class="formulas">
+                <p><em>l</em> is the base-length, <em>h</em> is the height, <em>w</em>
+                is the width</p>
+                <p>The formula for surface area of a pyramid: </p>
+                <img src="{{ url_for('static', filename='Pyramid/Pyramid-Surface-area-formula.png') }}">
+
+                <p>The formula for lateral area of a pyramid</p>
+                <img src="{{ url_for('static', filename='Pyramid/Pyramid-Lateral-area-formula.png') }}">
+
+                <p>The formula for volume of a pyramid:</p>
+                <img src="{{ url_for('static', filename='Pyramid/Pyramid-Volume-formula.png') }}">
+            </div>
+        </div>
+    </body>
+
+</html>

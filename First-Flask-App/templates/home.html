@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Homepage</title>
+        <link rel="stylesheet" href= "{{ url_for('static',filename='home-layout.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-box">
+                <h1>Surface area, Lateral area, and Volume calculator</h1>
+            </div>
+        </header>
+        <nav class="site-nav group">
+            <ul class="group">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href= "{{ url_for('cone') }}">Cone</a></li>
+                <li><a href="{{ url_for('cube') }}">Cube</a></li>
+                <li><a href="{{ url_for('cylinder') }}">Cylinder</a></li>
+                <li><a href="{{ url_for('sphere') }}">Sphere</a></li>
+                <li><a href="{{ url_for('pyramid') }}">Pryamid</a></li>
+                <li><a href="{{ url_for('triangular_prism') }}">Triangular-Prism</a></li>
+                <li><a href="{{ url_for('rectangular_prism') }}">Rectangular-Prism</a></li>
+                <li><a href="{{ url_for('pentagonal_prism') }}">Pentagonal-Prism</a></li>
+                <li><a href="{{ url_for('hexagonal_prism') }}">Hexagonal-Prism</a></li>
+            </ul>
+        </nav>
+            <div class="text group content-area">
+
+                <p>This is a free calculator to solve surface area, lateral area,
+                and volume for multiple shapes</p>
+            
+            </div>
+    </body>
+</html>
